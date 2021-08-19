@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "fecha": "^4.2.1",
+    "puppeteer": "^10.2.0",
     "yarn": "^1.22.11"
   }
 }
