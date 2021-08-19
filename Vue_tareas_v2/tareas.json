@@ -1,0 +1,33 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "nombre": "Mis tareas de Berta",
+      "is finis": "true"
+    },
+    {
+      "id": 3,
+      "nombre": "Tarea 3",
+      "is finis": "false"
+    },
+    {
+      "id": 4,
+      "nombre": "Tarea 4",
+      "is finis": "false"
+    },
+    {
+      "id": 5,
+      "nombre": "Tarea 5",
+      "is finis": "false"
+    },
+    {
+      "id": 6,
+      "nombre": "Tarea 6",
+      "is finis": "true"
+    },
+    {
+      "nombre": "comprar regalo Xavi",
+      "id": 7
+    }
+  ]
+}

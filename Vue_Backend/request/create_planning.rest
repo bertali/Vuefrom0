@@ -1,0 +1,17 @@
+POST http://localhost:3001/api/plannings 
+Content-Type: application/json 
+
+{
+    "content": "This is a new planning",
+    "important": true 
+}
+
+###
+
+POST http://localhost:3001/api/plannings 
+Content-Type: application/json 
+
+{
+}
+
+

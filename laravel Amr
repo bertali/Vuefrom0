@@ -1,0 +1,55 @@
+1-install laravel folder
+        Via Composer;
+	composer create-project laravel/laravel example-app
+	cd example-app
+	php artisan serve
+
+	then take the url and paste it in browser
+2-create an empty db in phpmyadmin
+3-in .env put the database name in DB_DATABASE
+4-creating a table
+	make sure you are inside the laravel folder
+	php artisan make:migration create_newtable_table 
+	or
+	php artisan make:migration books
+	edit the table columns in database/migrations
+4-making migrations
+	php artisan migrate
+	php artisan migrate:fresh --seed
+
+5-Prepare for bootstrap
+	composer require laravel/ui
+	php artisan ui bootstrap  --auth
+	npm install
+	npm run dev
+	OPTIONAL TO FIX ERROR:	npm install npm@latest -g
+
+
+6-Install Crud
+	a-install
+		composer require ibex/crud-generator --dev
+	b-publish the default package's config
+		php artisan vendor:publish --tag=crud
+	c-usage "make crud for the table"
+		php artisan make:crud banks
+			//banks is the name of the table
+	d-adding the controller in web.php
+		Route::resource('books',App\Http\Controllers\BookController::class);
+	e-add blocking to the users that are not registered
+		Route::resource('books',App\Http\Controllers\BookController::class)->middleware('auth');
+	f-show the navbar of books for the logged members only
+		in resources\views\layouts\app.blade.php
+		----------------------------------
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    		<!-- Left Side Of Navbar -->
+
+                    			@if (Auth::check())
+                    			<ul class="navbar-nav mr-auto">
+                        				<a class="nav-link" href="{{ route('books.index') }}">{{ __('Books') }}</a>
+                    			</ul>
+                    		@endif
+		----------------------------------
+			
+	
+*Si da error en el mix:
+npm install resolve-url-loader@^3.1.2 --save-dev --legacy-peer-deps npm install npm@latest -g 
